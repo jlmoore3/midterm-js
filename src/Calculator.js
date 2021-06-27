@@ -3,8 +3,8 @@ import React from "react";
 const Calculator = (props) => {
   return (
     <div className="column">
+      <h4>Your Numbers:</h4>
       <div className="calculateBox">
-        <h3>Your Numbers:</h3>
         <ul className="displayNums">
           {props.myNumbers.map((num) => (
             <li>{num}</li>

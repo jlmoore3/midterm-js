@@ -10,7 +10,7 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: fade infinite 3s linear;
   }
 }
 
@@ -29,14 +29,16 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes fade {
+  0%,
+  100% {
+    opacity: 0;
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    opacity: 1;
   }
 }
+
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto auto auto;
@@ -64,8 +66,6 @@
   width: 1260px;
 }
 .column {
-  max-width: 320px;
-  width: 320px;
   min-width: 180px;
   padding: 10px;
 }
@@ -135,8 +135,9 @@ button.biggestButton {
   margin-right: auto;
   height: 50px;
   width: 200px;
-  background-color: #f6f6f6;
-  color: #000000;
+  background-color: #301934;
+  color: #f6f6f6;
+  border: solid 2px #f6f6f6;
 }
 
 .numSelected {

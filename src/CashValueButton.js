@@ -7,7 +7,7 @@ const CashValueButton = (props) => {
       onClick={() =>
         props.myNumbers.length === 5
           ? props.setBet((currentBet) => [...currentBet, props.allCashVals])
-          : alert("Please choose 5 numbers before placing your bet")
+          : alert("Please choose 5 numbers before placing your bet.")
       }
     >
       ${props.allCashVals}

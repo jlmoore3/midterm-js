@@ -5,6 +5,16 @@ import CashValue from "./CashValue";
 import Calculator from "./Calculator";
 import { useState } from "react";
 
+{
+  /* 
+Joshua Logan Moore
+061431086
+Midterm for CJV805, summer 2021
+Instructor: Kadeem Best
+27-06-2021
+*/
+}
+
 function App() {
   const [currentBet, setBet] = useState([]);
   const [myNumbers, setNumbers] = useState([]);
@@ -16,7 +26,9 @@ function App() {
 
   const buttonClick = (num) => {
     if (myNumbers.length >= 5 && !myNumbers.includes(num)) {
-      console.log("Array has 5 elements already");
+      alert(
+        "You may only pick 5 numbers. Deselect a highlighted number by clicking it again."
+      );
     } else {
       if (myNumbers.includes(num)) {
         console.log(`${num} already found`);
@@ -45,7 +57,7 @@ function App() {
 
   const cashOut = () => {
     if (myNumbers.length === 5 && totalBet > 0) {
-      alert(`Cashed out. Ticket Bet: $${totalBet} for Numbers: ${myNumbers}`);
+      alert(`Cashed out. Ticket Bet: $${totalBet} for Numbers: ${myNumbers}.`);
       const thisTicket = {
         totalBet: totalBet,
         myNumbers: myNumbers.join(", "),
@@ -53,9 +65,9 @@ function App() {
       setTickets((myTickets) => [...myTickets, thisTicket]);
       clearAll();
     } else if (myNumbers.length === 5 && totalBet < 1) {
-      alert(`Please choose your bet first`);
+      alert(`Please choose your bet first.`);
     } else if (myNumbers.length !== 5) {
-      alert(`Please choose 5 numbers`);
+      alert(`Please choose 5 numbers.`);
     }
   };
 
@@ -87,8 +99,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <h1>WHE WHE Lottery System</h1>
-        <ul className="displayTix">{displayTickets}</ul>
+        <h1>Lottery Cash Register System</h1>
+
         <div className="body-container">
           <CashValue
             currentBet={currentBet}
@@ -109,10 +121,17 @@ function App() {
             totalBet={totalBet}
             clearAll={clearAll}
           />
+
+          <div className="column"></div>
+          <div className="column">
+            <button className="biggestButton bigButton" onClick={cashOut}>
+              Cash Out
+            </button>
+
+            <ul className="displayTix">{displayTickets}</ul>
+          </div>
+          <div className="column"></div>
         </div>
-        <button className="biggestButton bigButton" onClick={cashOut}>
-          Cash Out
-        </button>
       </header>
     </div>
   );

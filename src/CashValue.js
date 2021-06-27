@@ -3,7 +3,6 @@ import CashValueButton from "./CashValueButton";
 
 const CashValue = (props) => {
   const cashValsInit = [1, 2, 5, 10, 20, 50];
-
   return (
     <div className="column">
       <h4>How to Play:</h4>
@@ -14,6 +13,7 @@ const CashValue = (props) => {
       </p>
       {cashValsInit.map((allCashVals, i) => (
         <CashValueButton
+          key={i}
           allCashVals={allCashVals}
           setBet={props.setBet}
           myNumbers={props.myNumbers}
@@ -21,7 +21,7 @@ const CashValue = (props) => {
       ))}
 
       <button className="bigButton" onClick={props.resetBet}>
-        Reset Cash Bet
+        Reset Bet
       </button>
     </div>
   );
