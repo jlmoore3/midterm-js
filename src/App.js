@@ -72,8 +72,8 @@ function App() {
     }
   };
 
-  const displayTickets = myTickets.map((tix) => (
-    <li key={tix.mynumbers}>
+  const displayTickets = myTickets.map((tix, i) => (
+    <li key={i}>
       <span className="text-left">${tix.totalBet}:</span>{" "}
       <span className="text-right">{tix.myNumbers}</span>
     </li>

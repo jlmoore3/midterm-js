@@ -6,6 +6,7 @@ const Numbers = (props) => {
       <div className="grid-container">
         {props.numbersArr.map((number, i) => (
           <Number
+            key={i}
             number={number}
             myNumbers={props.myNumbers}
             count={props.count}
