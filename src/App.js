@@ -86,7 +86,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
+        <img src={logo} className="App-logo" alt="logo" />
         <h1>WHE WHE Lottery System</h1>
         <ul className="displayTix">{displayTickets}</ul>
         <div className="body-container">
