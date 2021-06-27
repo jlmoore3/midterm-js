@@ -1,9 +1,10 @@
 .App {
   text-align: center;
+  min-width: 640px;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 10vmin;
   pointer-events: none;
 }
 
@@ -14,7 +15,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background: url("./bg-image.jpg") no-repeat fixed center;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,4 +36,153 @@
   to {
     transform: rotate(360deg);
   }
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  width: 250px;
+  height: 180px;
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+}
+.grid-item {
+  background-color: #f6f6f6;
+  border: 0px;
+  color: #000000;
+  font-size: inherit;
+  text-align: center;
+  box-sizing: border-box;
+}
+.grid-item:hover {
+  background-color: slateblue;
+}
+
+.body-container {
+  display: grid;
+  grid-template-columns: 420px 420px 420px;
+  width: 1260px;
+}
+.column {
+  max-width: 320px;
+  width: 320px;
+  min-width: 180px;
+  padding: 10px;
+}
+
+@media only screen and (max-width: 1260px) {
+  .body-container {
+    grid-template-columns: 100%;
+    width: 100%;
+  }
+  h1 {
+    margin: 10px 0px 0px 0px;
+  }
+  .column {
+    max-width: 979px;
+    min-width: 320px;
+    width: 320px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.calculateBox {
+  background-color: #f6f6f6;
+  color: #000000;
+  border: 3px solid #333333;
+  font-size: 0.8rem;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+p {
+  font-size: 0.75rem;
+  text-align: left;
+  margin: 0px 5px 15px 5px;
+}
+
+h4 {
+  margin-top: 0;
+}
+
+button {
+  background-color: #f6f6f6;
+  color: #000000;
+  font-size: 1.2rem;
+  padding: 5px;
+  margin-right: 5px;
+  width: 50px;
+}
+button:hover {
+  background-color: slateblue;
+}
+
+button.bigButton {
+  background-color: plum;
+  color: #f6f6f6;
+  font-size: 1.2rem;
+  padding: 5px;
+  margin: 0;
+  width: 120px;
+  margin-top: 10px;
+}
+
+button.biggestButton {
+  margin-left: auto;
+  margin-right: auto;
+  height: 50px;
+  width: 200px;
+  background-color: #f6f6f6;
+  color: #000000;
+}
+
+.numSelected {
+  background-color: plum;
+}
+
+.cashSelected {
+  border: 7px purple solid;
+  box-sizing: border-box;
+}
+
+.center {
+  text-align: center;
+}
+
+button.unbutton {
+  background-color: none;
+  color: #000000;
+  font-size: 1.2rem;
+  padding: 0px;
+  margin-right: 0x;
+  width: 100%;
+  height: 100%;
+}
+
+button.cashButton {
+  background-color: #98ff98;
+  width: 15%;
+}
+
+ul.displayNums {
+  list-style-type: none;
+  font-size: 1.2rem;
+  text-align: right;
+  padding-right: 1rem;
+  margin: 0px;
+}
+ul.displayTix {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
 }
